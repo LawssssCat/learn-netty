@@ -15,7 +15,8 @@ public class Start {
 		ExecutorService workerExecutor = Executors.newCachedThreadPool() ;
 		
 		//初始化线程
-		NioSelectorRunnablePool nioSelectorRunnablePool = new NioSelectorRunnablePool(bossExecutor, workerExecutor);
+		NioSelectorRunnablePool nioSelectorRunnablePool = // 线程管理对象
+				new NioSelectorRunnablePool(bossExecutor, workerExecutor);
 		
 		//获取服务类
 		//绑定端口
